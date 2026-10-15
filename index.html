@@ -47,13 +47,45 @@
         section {
             padding: 70px 10%;
         }
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
 
-        .hero {
-            min-height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 0 0 280px;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+.hero h3 {
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 10px;
+}
+
+.hero .btn {
+    margin-right: 10px;
+}
+       
+        
 
         .hero h1 {
             font-size: 46px;
@@ -118,26 +150,49 @@
             color: #cbd5e1;
         }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
+     @media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
 
-            nav a {
-                margin: 5px;
-                font-size: 13px;
-            }
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
 
-            .hero h1 {
-                font-size: 34px;
-            }
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 25px;
+    }
 
-            section {
-                padding: 50px 7%;
-            }
-        }
-    </style>
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image {
+        flex: 0 0 auto;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero .btn {
+        margin: 10px 5px;
+    }
+
+    section {
+        padding: 50px 7%;
+    }
+}  
+               </style>
 </head>
 
 <body>
@@ -154,20 +209,31 @@
     </header>
 
     <section class="hero" id="home">
+
+    <div class="hero-content">
         <p>Hello, welcome to my portfolio!</p>
+
         <h1>I'm <span>Akshay Kadali</span></h1>
-        <img src="./Professional%20image.jpeg"
-     alt="Akshay Kadali"
-     style="width:150px;height:150px;object-fit:cover;border-radius:50%;border:4px solid #38bdf8;">
+
         <h3>BTech CSE Student | Aspiring Software Developer</h3>
+
         <p>
-            I am a Computer Science student passionate about
-            programming, web development and learning new technologies.
+            I am a Computer Science student passionate about programming,
+            web development and learning new technologies.
             I enjoy building projects and improving my technical skills.
         </p>
+
         <a class="btn" href="#about">Explore My Portfolio</a>
-      <a class="btn" href="./AKSHAY%20RESUME.pdf" target="_blank" rel="noopener">Download My Resume</a>  
-    </section>
+
+        <a class="btn" href="./AKSHAY%20RESUME.pdf"
+           target="_blank" rel="noopener">Download My Resume</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="./Professional%20image.jpeg" alt="Akshay Kadali">
+    </div>
+
+</section>
 
     <section id="about">
         <h2>About Me</h2>
